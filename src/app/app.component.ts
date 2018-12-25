@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-dream-app';
+  //** PROPERTIES */
+  public isAuthenticated: boolean = false;
+  title = 'My Dream App -- By Andres Sosa';
 }
