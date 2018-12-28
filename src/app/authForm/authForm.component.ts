@@ -1,5 +1,5 @@
 //** LIBRARIES */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'auth',
@@ -7,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['authForm.scss']
 })
 export class AuthFormComponent implements OnInit {
-
+    //** PROPERTIES AND METHODS */
+    @Output('onAuthenticate') onAuthenticate: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     ngOnInit(): void {
-        throw new Error("Method not implemented.");
+        //** Init */
+        let self = this;
+
+    }
+
+    public login(): void {
+        //** Init */
+        let self = this;
+
+        alert("Yes you are tryng to login.");
+        self.onAuthenticate.emit(true);
     }
 
 }
