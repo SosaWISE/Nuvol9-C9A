@@ -1,18 +1,54 @@
 <div class="modal" style="display: block" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Field Service Authentication</h5>
+        <div class="modal-header" style="background-color: #3f9dd65c">
+          <h5 class="modal-title">Núvol 9 FS-Authentication</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
-          We need to add a form.
+          <h6>Enter credentials or signup for an account.</h6>
+          <form [formGroup]="frmMain" class="form-inline">
+            <div class="container" style="text-align: left; padding-top: 10px;">
+                <div class="row">
+                    <div class="offset-1"></div>
+                    <div class="col-sm-4">
+                        <label for="userName">Username</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" id="userName" formControlName="userName" class="form-control form-control-sm mx-sm-3" aria-describedby="usernameHelpInline">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="padding: 10px"></div>
+                </div>
+                <div class="row">
+                    <div class="offset-1"></div>
+                    <div class="col-sm-4">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="password" id="password" formControlName="password" class="form-control form-control-sm mx-sm-3" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="padding: 10px"></div>
+                </div>
+                <div class="row">
+                    <div class="offset-1"></div>
+                    <div class="col-sm-4">
+                        <label for="rememberMe">Remember Me</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="checkbox" id="rememberMe" formControlName="rememberMe" class="form-control form-control-sm" style="margin: 0 16px; padding: 0 8px" />
+                    </div>
+                </div>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sign-up</button>
           <button type="button" class="btn btn-primary" (click)="login()">Login</button>
         </div>
       </div>
