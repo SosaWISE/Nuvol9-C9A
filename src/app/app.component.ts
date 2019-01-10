@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //** PROPERTIES */
-  public isAuthenticated: boolean = false;
+  public isAuthenticated: boolean = true;
   title = 'Cloud 9 Adjuster -- By Andres Sosa';
 
   //** EVENT HANDLERS */

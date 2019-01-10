@@ -6,9 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AUTH_CONTAINER_DECLARATIONS } from './authForm';
 
+import { ROOT_DECLARATIOS } from './root/';
+
 @NgModule({
   declarations: [
     ...AUTH_CONTAINER_DECLARATIONS,
+    ...ROOT_DECLARATIOS,
     AppComponent
   ],
   imports: [
