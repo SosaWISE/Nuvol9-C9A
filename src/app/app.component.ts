@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //** PROPERTIES */
   public isAuthenticated: boolean = false;
-  title = 'My Dream App -- By Andres Sosa';
+  title = 'Cloud 9 Adjuster -- By Andres Sosa';
 
   //** EVENT HANDLERS */
   public onAuthenticate(isAuth: boolean): void {
