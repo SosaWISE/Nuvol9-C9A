@@ -1,0 +1,64 @@
+<div class="clearfix page-head bg-light">
+    <form>
+        <div class="form-row">
+          <div class="col-md-4 mb-2">
+            <!-- <label for="validationDefault01">First name</label> -->
+            <input type="text" class="form-control form-control-sm" id="validationDefault01" placeholder="First name" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <!-- <label for="validationDefault02">Last name</label> -->
+            <input type="text" class="form-control form-control-sm" id="validationDefault02" placeholder="Last name" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <!-- <label for="validationDefaultUsername">Username</label> -->
+            <input type="text" class="form-control form-control-sm" id="validationDefaultUsername" placeholder="Any Phone" required>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-2">
+                <input type="text" class="form-control form-control-sm" placeholder="Street Address" />
+            </div>
+            <div class="col-md-4 mb-2">
+                <!-- <label for="validationDefault03">City</label> -->
+                <input type="text" class="form-control form-control-sm" id="validationDefault03" placeholder="City" required>
+            </div>
+            <div class="col-md-4 mb-2">
+              <!-- <label for="validationDefault04">State</label> -->
+              <select class="form-control form-control-sm">
+                  <option>[Choose State]</option>
+              </select>
+              <!-- <input type="text" class="form-control form-control-sm" id="validationDefault04" placeholder="State" required> -->
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-2 mb-2">
+                <!-- <label for="validationDefault05">Zip</label> -->
+                <input type="text" class="form-control form-control-sm" id="validationDefault05" placeholder="Postal Code" required>
+            </div>
+            <div class="col-md-4 mb-2">
+                <input type="text" class="form-control form-control-sm" placeholder="Email Address" />
+            </div>
+            <div class="col-md-2 offset-md-2 mb-2">
+                <input type="text" class="form-control form-control-sm" placeholder="Claim #" />
+            </div>
+            <div class="col-md-2" style="text-align: right;">
+                <button class="btn btn-primary btn-sm" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+    <div class="card">
+        <div class="card-header">Search Results</div>
+        <div class="card-body">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
