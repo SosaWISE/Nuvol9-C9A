@@ -3,17 +3,46 @@
     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Sign out</a>
+        <a class="nav-link" href="#">Exit <i class="fas fa-sign-out"></i></a>
         </li>
     </ul>
 </nav>
 <div class="container-fluid">
     <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            Left Nav
+            <div class="left-sidebar-scroll">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fal fa-file-certificate"></i> <span> Claims</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fal fa-building"></i> <span> Companies</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fal fa-users"></i> <span> Adjusters</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fal fa-file-chart-line"></i> Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fal fa-cogs"></i><span> Settings</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            
         </nav>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            This is the main container.
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
+            <h3>This is the main container.</h3>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">Some Widget</div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 </div>
