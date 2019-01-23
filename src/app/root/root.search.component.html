@@ -52,7 +52,7 @@
             <table class="table table-sm table-hover table-striped">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Claim #</th>
                         <th>Name</th>
                         <th>Address</th>
                         <th>Phone</th>
@@ -67,6 +67,12 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="card-footer">
+            <div class="float-right">
+                <lib-paging [pagingInfo]="paginInfo"></lib-paging>
+            </div>
+            Total Records: <strong>{{paginInfo.totalRecords}}</strong>
         </div>
     </div>
 </div>

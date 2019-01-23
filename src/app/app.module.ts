@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { AUTH_CONTAINER_DECLARATIONS } from './authForm';
 
 import { ROOT_DECLARATIOS } from './root/';
+import { LIB_PAGING_COMPONENTS_DECLARATIONS } from './lib/';
 
 @NgModule({
   declarations: [
     ...AUTH_CONTAINER_DECLARATIONS,
     ...ROOT_DECLARATIOS,
+    ...LIB_PAGING_COMPONENTS_DECLARATIONS,
     AppComponent
   ],
   imports: [

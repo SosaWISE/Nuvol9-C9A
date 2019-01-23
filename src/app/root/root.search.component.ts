@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 //** MODELS */
 import { ISearchResultItem } from '../models/root.search.models';
+import { IPagingInfo } from '../models/utl/paging.models';
 
 @Component({
     selector: 'root-search-component',
@@ -12,9 +13,21 @@ import { ISearchResultItem } from '../models/root.search.models';
 export class RootSearchComponent implements OnInit {
     /** PORPERTIES */
     public searchResult: ISearchResultItem[] = [];
+    public paginInfo: IPagingInfo;
 
     /** CONSTRUCTOR */
-    constructor() {}
+    constructor() {
+        //** Init */
+        let self = this;
+
+        //** Init Paging */
+        self.paginInfo = {
+            currentPage: 2,
+            totalPages: 3,
+            pageSize: 30,
+            totalRecords: 87
+        }
+    }
 
     //**#region START Base Methods */
     ngOnInit(): void {
