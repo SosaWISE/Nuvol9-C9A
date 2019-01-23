@@ -71,4 +71,10 @@ export class RootSearchComponent implements OnInit {
     public submitMe(): void {
         alert("JES is true.  I'm Nacho...");
     }
+
+    public onPageChange(pagingInfo: IPagingInfo): void {
+        console.info("Here you go: ", pagingInfo);
+        
+        alert(`JES you are on page ${pagingInfo.currentPage}`);
+    }
 }

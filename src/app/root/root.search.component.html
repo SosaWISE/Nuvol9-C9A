@@ -70,7 +70,7 @@
         </div>
         <div class="card-footer">
             <div class="float-right">
-                <lib-paging [pagingInfo]="paginInfo"></lib-paging>
+                <lib-paging [pagingInfo]="paginInfo" (onPageEvent)="onPageChange($event)"></lib-paging>
             </div>
             Total Records: <strong>{{paginInfo.totalRecords}}</strong>
         </div>
