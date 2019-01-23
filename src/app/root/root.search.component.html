@@ -42,7 +42,7 @@
                 <input type="text" class="form-control form-control-sm" placeholder="Claim #" />
             </div>
             <div class="col-md-2" style="text-align: right;">
-                <button class="btn btn-primary btn-sm" type="submit">Search</button>
+                <button class="btn btn-primary btn-sm" type="submit" (click)="submitMe()">Search</button>
             </div>
         </div>
     </form>
@@ -59,11 +59,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>123-A01</td>
-                        <td>Sammy Sosa</td>
-                        <td>1184 N 830 E; OREM UT 84098</td>
-                        <td>(801) 123-3433</td>
+                    <tr *ngFor="let item of searchResult">
+                        <td>{{item.claimNumber}}</td>
+                        <td>{{item.fullName}}</td>
+                        <td>{{item.address}}</td>
+                        <td>{{item.phone}}</td>
                     </tr>
                 </tbody>
             </table>
