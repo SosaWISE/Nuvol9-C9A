@@ -20,6 +20,10 @@ export class RootComponent {
     public onOpenClaim(claim: ISearchResultItem): void {
         //** Init */
         let self = this;
-        self.rootContentPane = 'ClaimTabsPane'
+        self.rootContentPane = 'ClaimTabsPane';
+    }
+
+    public goBack(): void {
+        this.rootContentPane = 'SearchPane';
     }
 }
