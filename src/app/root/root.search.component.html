@@ -59,7 +59,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of searchResult">
+                    <tr style="cursor: pointer" *ngFor="let item of searchResult" (click)="openClaim(item.claimNumber)">
                         <td>{{item.claimNumber}}</td>
                         <td>{{item.fullName}}</td>
                         <td>{{item.address}}</td>

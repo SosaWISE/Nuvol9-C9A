@@ -34,9 +34,12 @@
             </div>
             
         </nav>
-        <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 bg-light">
-            <div class="row">
-                <root-search-component style="width: 100%"></root-search-component>
+        <main [ngSwitch]="rootContentPane" role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 bg-light">
+            <div *ngSwitchCase="'SearchPane'" class="row">
+                <root-search-component (onOpenClaim)="onOpenClaim($event)" style="width: 100%"></root-search-component>
+            </div>
+            <div *ngSwitchCase="'ClaimTabsPane'" class="row">
+                <h3>Claim Tabs Pane</h3>
             </div>
         </main>
     </div>

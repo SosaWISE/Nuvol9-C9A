@@ -1,5 +1,5 @@
 //** LIBRARIES */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 //** MODELS */
 import { ISearchResultItem } from '../models/root.search.models';
@@ -12,6 +12,7 @@ import { IPagingInfo } from '../models/utl/paging.models';
 })
 export class RootSearchComponent implements OnInit {
     /** PORPERTIES */
+    @Output('onOpenClaim') onOpenClaim: EventEmitter<ISearchResultItem> = new EventEmitter<ISearchResultItem>();
     public searchResult: ISearchResultItem[] = [];
     public paginInfo: IPagingInfo;
 
@@ -76,5 +77,12 @@ export class RootSearchComponent implements OnInit {
         console.info("Here you go: ", pagingInfo);
         
         alert(`JES you are on page ${pagingInfo.currentPage}`);
+    }
+
+    public openClaim(claim: ISearchResultItem): void {
+        //** Init */
+        let self = this;
+
+        self.onOpenClaim.emit(claim)
     }
 }
