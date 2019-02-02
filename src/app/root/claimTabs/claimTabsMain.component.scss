@@ -1,0 +1,43 @@
+.nvl9-container {
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.container-box-hdr {
+    font-size: .75rem;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+.container-box {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    height: 300px;
+    padding: 10px;
+
+    table.container-table {
+        font-size: .75rem;
+        td.col-title {
+            padding: 0 10px 0 3px;
+            .va-top {
+                vertical-align: top;
+            }
+        }
+        td.col-value {
+            font-weight: bold;
+            .col-value-sub {
+                font-size: .65rem;
+                color: gray;
+            }
+        }
+    }
+}
+
+.container-box-urgent {
+    background-image: url('/assets/img/urgentRibbon.png');
+    background-size: 68px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
