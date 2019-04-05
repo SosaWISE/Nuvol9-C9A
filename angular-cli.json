@@ -1,0 +1,8 @@
+{
+    "defaults": {
+      "serve": {
+        "port": 4200,
+        "host": "c9a.nuvol9.com"
+      }
+    }
+  }
