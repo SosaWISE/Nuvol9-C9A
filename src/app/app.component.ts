@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //** PROPERTIES */
-  public isAuthenticated: boolean = true;
-  title = 'Cloud 9 Adjuster -- By Andres Sosa';
+  /** PROPERTIES */
+  public isAuthenticated = true;
+  title = 'IC 9 Adjuster -- By Andres Sosa';
 
-  //** EVENT HANDLERS */
+  /** EVENT HANDLERS */
   public onAuthenticate(isAuth: boolean): void {
-    //** Init */
-    let self = this;
+    /** Init */
+    const self = this;
 
     self.isAuthenticated = isAuth;
   }

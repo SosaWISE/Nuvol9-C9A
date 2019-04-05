@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Cloud 9 Adjuster</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">IC 9 Adjuster</a>
     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -36,7 +36,7 @@
         </nav>
         <main [ngSwitch]="rootContentPane" role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 bg-light">
             <div *ngSwitchCase="'SearchPane'" class="row">
-                <root-search-component (onOpenClaim)="onOpenClaim($event)" style="width: 100%"></root-search-component>
+                <app-root-search-component (onOpenClaim)="onOpenClaim($event)" style="width: 100%"></app-root-search-component>
             </div>
             <div *ngSwitchCase="'ClaimTabsPane'" class="row">
                 <a href="#" style="width:100%" (click)="goBack()">&lt;&lt; Back to Search</a>

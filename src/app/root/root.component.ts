@@ -1,24 +1,24 @@
-//** LIBRARIES */
+/** LIBRARIES */
 import { Component } from '@angular/core';
 
-//** MODELS */
+/** MODELS */
 import { ISearchResultItem } from '../models/root.search.models';
 
 @Component({
-    selector: 'root-component',
+    selector: 'app-root-component',
     templateUrl: './root.component.html',
     styleUrls: ['./root.component.scss']
 })
 export class RootComponent {
-    //** PROPERTIES */
-    public rootContentPane: string = 'SearchPane';
+    /** PROPERTIES */
+    public rootContentPane = 'SearchPane';
 
-    //** CONSTRUCTORS */
+    /** CONSTRUCTORS */
     constructor() {}
 
-    //** Methods */
+    /** Methods */
     public onOpenClaim(claim: ISearchResultItem): void {
-        //** Init */
+        /** Init */
         let self = this;
         self.rootContentPane = 'ClaimTabsPane';
     }
