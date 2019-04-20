@@ -19,7 +19,7 @@ export class RootComponent {
     /** Methods */
     public onOpenClaim(claim: ISearchResultItem): void {
         /** Init */
-        let self = this;
+        const self = this;
         self.rootContentPane = 'ClaimTabsPane';
     }
 
