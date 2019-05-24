@@ -1,0 +1,106 @@
+<div class="dashboardRoot">
+    <h4>Customer Dashboard</h4>
+    <div class="dashboardRoot_row">
+        <div class="dashboardRoot_row-info">
+            <h3 class="dashboardRoot_row-title">Sammy Johnson (#100234)</h3>
+            Total MMR: <strong>$359.98 (US)</strong>
+            <br />Next Billing Date: <strong>6/05/2019</strong>
+        </div>
+    </div>
+    <div class="dashboardRoot_row">
+        <div class="dashboardRoot_btn menu alarmHdr"><i class="fa fa-bell fa-sm" aria-hidden="true"></i> Add Alarm</div>
+        <div class="dashboardRoot_btn menu solarHdr"><i class="fa fa-sun fa-sm" aria-hidden="true"></i> Add Solar</div>
+        <div class="dashboardRoot_btn menu defltHdr"><i class="fa fa-bell fa-sm" aria-hidden="true"></i> Add Commercial</div>
+        <div class="dashboardRoot_btn menu bugsHdr"><i class="fa fa-bug fa-sm" aria-hidden="true"></i> Add Pest Control</div>
+    </div>
+    <div class="dashboardRoot_row">
+        <div class="dashboardRoot_cell"
+            [class.alarm]="item.productType=='A'"
+            [class.deflt]="item.productType=='C'"
+            [class.solar]="item.productType=='S'"
+            [class.bugs]="item.productType=='P'"
+            *ngFor="let item of accountList">
+            <div class="cell-icon">
+                <p>
+                    <i class="fa fa-bell fa-lg" aria-hidden="true"
+                    [class.fa-bell]="item.productType=='A' || item.productType=='C'"
+                    [class.fa-sun]="item.productType=='S'"
+                    [class.fa-bug]="item.productType=='P'"
+                    ></i>
+                </p>
+            </div>
+            <div class="cell-header"
+                [class.alarmHdr]="item.productType=='A'"
+                [class.defltHdr]="item.productType=='C'"
+                [class.solarHdr]="item.productType=='S'"
+                [class.bugsHdr]="item.productType=='P'"
+            >#: <span class="cell-content_accnumber">{{item.productType}}{{item.subAccount}}</span></div>
+            <div class="cell-content">
+                <p>
+                    <span class="cell-content_name">{{item.customerName}}</span>
+                    <br /><span class="cell-content_address">{{item.street}}<br />{{item.cityStateZip}}</span>
+                    <br /><a href="tel:{{item.phone}}" class="cell-content_phone">{{item.phone}}</a> &nbsp;<i class="fa fa-phone fa-sm" aria-hidden="true"></i>
+                </p>
+            </div>
+        </div>
+        <!-- <div class="dashboardRoot_cell alarm">
+            <div class="cell-icon">
+                <p>
+                    <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+                </p>
+            </div>
+            <div class="cell-content">
+                <p>
+                    #: <span class="cell-content_accnumber">A02</span>
+                    <br /><span class="cell-content_name">Saul Sosa</span>
+                    <br /><span class="cell-content_address">794 E 3950 N;<br />PROVO UT 84604</span>
+                </p>
+            </div>
+        </div>
+        <div class="dashboardRoot_cell">
+            <div class="cell-icon">
+                <p>
+                    <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+                </p>
+            </div>
+            <div class="cell-content">
+                <p>
+                    #: <span class="cell-content_accnumber">C01</span>
+                    <br /><span class="cell-content_name">Cimtech Corp</span>
+                    <br /><span class="cell-content_address">747 S 100 E;<br />PROVO UT 84606</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboardRoot_cell solar">
+            <div class="cell-icon">
+                <p>
+                    <i class="fa fa-sun fa-lg" aria-hidden="true"></i>
+                </p>
+            </div>
+            <div class="cell-content">
+                <p>
+                    #: <span class="cell-content_accnumber">S01</span>
+                    <br /><span class="cell-content_name">Saul Sosa</span>
+                    <br /><span class="cell-content_address">747 S 100 E;<br />PROVO UT 84606</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboardRoot_cell bugs">
+            <div class="cell-icon">
+                <p>
+                    <i class="fa fa-bug fa-lg" aria-hidden="true"></i>
+                </p>
+            </div>
+            <div class="cell-content">
+                <p>
+                    #: <span class="cell-content_accnumber">P01</span>
+                    <br /><span class="cell-content_name">Saul Sosa</span>
+                    <br /><span class="cell-content_address">747 S 100 E;<br />PROVO UT 84606</span>
+                </p>
+            </div>
+        </div>     -->
+
+    </div>
+</div>

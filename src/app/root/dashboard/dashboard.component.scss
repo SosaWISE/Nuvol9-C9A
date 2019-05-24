@@ -1,0 +1,142 @@
+$solar-bg: #e3aa04;
+$solar-bgFade: rgba(227, 170, 4, 0.75);
+$alarm-bg: #4285f4;
+$alarm-bgFade: rgba(66, 133, 244, 0.74);
+$bugsa-bg: #33a451;
+$bugsa-bgFade: rgba(51, 164, 81, 0.75);
+$deflt-bg: gray;
+$deflt-bgFade: rgba(128, 128, 128, 0.75);
+
+
+.dashboardRoot {
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    &_row {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 80%;
+        // border: 1px solid gray;
+        background-color: #EEEEEE;
+        padding: 5px;
+
+        .solar {
+            background-color: $solar-bgFade;
+        }
+        .solarHdr {
+            background-color: $solar-bg;
+        }
+        .alarm {
+            background-color: $alarm-bgFade;
+        }
+        .alarmHdr {
+            background-color: $alarm-bg;
+        }
+        .bugs {
+            background-color: $bugsa-bgFade;
+        }
+        .bugsHdr {
+            background-color: $bugsa-bg;
+        }
+        .deflt
+        {
+            background-color: $deflt-bgFade;
+        }
+        .defltHdr {
+            background-color: $deflt-bg;
+        }
+
+        .menu {
+            padding: 11px 5px 5px 5px !important;
+        }
+
+        &-title {
+            color: black;
+        }
+        &-info {
+            color: black;
+            padding: 0 8px;
+        }
+    }
+
+    &_btn {
+        cursor: pointer;
+        min-width: 120px;
+        min-height: 50px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    &_cell {
+        .solar {
+            background-color: $solar-bgFade;
+        }
+        .solarHdr {
+            background-color: $solar-bg !important;
+        }
+        .alarm {
+            background-color: $alarm-bgFade;
+        }
+        .alarmHdr {
+            background-color: $alarm-bg !important;
+        }
+        .bugs {
+            background-color: $bugsa-bgFade;
+        }
+        .bugsHdr {
+            background-color: $bugsa-bg !important;
+        }
+        .deflt
+        {
+            background-color: $deflt-bgFade;
+        }
+        .defltHdr {
+            background-color: $deflt-bg !important;
+        }
+
+        cursor: pointer;
+        min-width: 240px;
+        min-height: 50px;
+        // background-color: $deflt-bg;
+        border-radius: 5px;
+        // padding: 5px;
+        margin: 5px;
+
+        .cell-header {
+            background-color: $alarm-bg;
+            padding: 0px 5px 0px 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .cell-content {
+            display: inline-block;
+            padding: 0 8px;
+
+            &_accnumber {
+                font-weight: bold;
+                font-size: 1.75rem;
+            }
+            &_address {
+                // color: green;
+                font-size: 1.05rem;
+            }
+
+            &_phone {
+                font-size: 1.05rem;
+                color: white;
+            }
+
+            &_name {
+                font-size: 1.75rem;
+            }
+        }
+
+        .cell-icon {
+            float: right;
+            padding: 8px 9px 0 0;
+        }
+
+    }
+}
